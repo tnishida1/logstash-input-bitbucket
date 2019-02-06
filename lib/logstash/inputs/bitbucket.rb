@@ -65,6 +65,7 @@ class LogStash::Inputs::Bitbucket < LogStash::Inputs::Base
     opts = schedule_type == "every" ? {:first_in => 0.01} : {}
     @scheduler.send(schedule_type, schedule_value, opts) {run_once(queue)}
     @scheduler.join
+    @logger.info('RUN COMPLETE')
   end
 
   def run_once(queue)
