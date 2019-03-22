@@ -55,21 +55,19 @@ describe LogStash::Inputs::Bitbucket do
   end
 
   #let(:response) { IO.read("response.json") }
-  describe "parsing data with real input" do
-
-    it "iterates over the data" do
-
-      response = Response.new(IO.read("response.json"))
-
-      uri = double("foo")
-      execution_time = double("bar")
-      parameters = {}
-      #def handle_pull_requests_response(queue, uri, parameters, response, execution_time)
-      expect {subject.handle_repos_response(
-        queue, uri, parameters, response, execution_time
-        )}.to_not raise_error
-    end
-  end
-
+  #describe "parsing data with real input" do
+#    it "iterates over the data" do
+#
+#      response = Response.new(IO.read("response.json"))
+#
+#      uri = double("foo")
+#      execution_time = double("bar")
+#      parameters = {}
+#      #def handle_pull_requests_response(queue, uri, parameters, response, execution_time)
+#      expect {subject.handle_repos_response(
+#        queue, uri, parameters, response, execution_time
+#        )}.to_not raise_error
+#    end
+#  end
   #handle_projects_response
 end
